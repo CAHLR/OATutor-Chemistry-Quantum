@@ -45,6 +45,7 @@ class ProblemCard extends React.Component {
         this.index = props.index;
         this.giveStuFeedback = props.giveStuFeedback;
         this.giveStuHints = props.giveStuHints;
+        this.giveStuBottomHintOnly = props.giveStuBottomHintOnly;
         this.unlockFirstHint = props.unlockFirstHint;
         this.giveHintOnIncorrect = props.giveHintOnIncorrect
         this.keepMCOrder = props.keepMCOrder;
@@ -87,6 +88,17 @@ class ProblemCard extends React.Component {
                 }
             }
         }
+
+
+        // Bottom out hints option
+        if (
+            this.giveStuBottomHintOnly &&
+            !(context.debug && context["use_expanded_view"])
+         ) {
+            // Bottom out hints
+            this.hints = []
+        }
+
 
         // Bottom out hints option
         if (

@@ -43,6 +43,7 @@ class Problem extends React.Component {
 
         const giveStuFeedback = this.props.lesson?.giveStuFeedback;
         const giveStuHints = this.props.lesson?.giveStuHints;
+        const giveStuBottomHintOnly = this.props.lesson?.giveStuBottomHintOnly;
         const keepMCOrder = this.props.lesson?.keepMCOrder;
         const keyboardType = this.props.lesson?.keyboardType;
         const doMasteryUpdate = this.props.lesson?.doMasteryUpdate;
@@ -54,6 +55,7 @@ class Problem extends React.Component {
         this.keepMCOrder = keepMCOrder != null && keepMCOrder;
         this.keyboardType = keyboardType != null && keyboardType;
         this.giveStuHints = giveStuHints == null || giveStuHints;
+        this.giveStuBottomHintOnly = giveStuBottomHintOnly == null || giveStuBottomHintOnly
         this.doMasteryUpdate = doMasteryUpdate == null || doMasteryUpdate;
         this.unlockFirstHint = unlockFirstHint != null && unlockFirstHint;
         this.giveStuBottomHint = giveStuBottomHint == null || giveStuBottomHint;
@@ -414,6 +416,14 @@ class Problem extends React.Component {
             return <div></div>;
         }
 
+        if (problem.id == 'ae4b921pre-test' || problem.id == 'ae4b921post-test') {
+            this.giveStuHints = false
+            this.giveStuFeedback=false
+        } else {
+            this.giveStuHints = true
+            this.giveStuFeedback=true
+        }
+
         return (
             <>
                 <div>
@@ -471,6 +481,7 @@ class Problem extends React.Component {
                                     problemSubTitle={problem.body}
                                     giveStuFeedback={this.giveStuFeedback}
                                     giveStuHints={this.giveStuHints}
+                                    giveStuBottomHintOnly={this.giveStuBottomHintOnly}
                                     keepMCOrder={this.keepMCOrder}
                                     keyboardType={this.keyboardType}
                                     giveHintOnIncorrect={
