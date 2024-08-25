@@ -277,7 +277,6 @@ class Platform extends React.Component {
     
         let chosenProblem = null;
     
-        // Filter the problems according to your predefined order
         for (let problemId of this.orderedProblemIds) {
             let problem = problems.find((prob) => prob.id === problemId);
             if (problem && !this.completedProbs.has(problem.id)) {
