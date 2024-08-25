@@ -414,15 +414,6 @@ app.post(
         var lastStepID = "";
         var lastTime = -1;
 
-        console.log("THIS IS THE LESSON:")
-        console.log(lesson)
-
-        console.log("THIS IS THE SEMESTER:")
-        console.log(semester)
-
-        console.log("THIS IS THE lmsUserId:")
-        console.log(lmsUserId)
-
         // get time of first action
         const firstQueryRef = submissionsRef
             .where("semester", "==", semester)
@@ -523,7 +514,7 @@ app.post(
             `;
 
         if (result.size == 0) {
-            formattedText = "Changing it!";
+            formattedText = "No student activity found for this lesson.";
         }
 
         const text = `
