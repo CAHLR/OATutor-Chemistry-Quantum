@@ -1,12 +1,11 @@
 const config = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    databaseURL:process.env.REACT_APP_FIREBASE_DATABASE_URL,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+    apiKey: "AIzaSyDKr8r7o0vivu85fyRhn7bIn6j5GxljX8w",
+    authDomain: "oatutor-askoski.firebaseapp.com",
+    projectId: "oatutor-askoski",
+    storageBucket: "oatutor-askoski.appspot.com",
+    messagingSenderId: "1050614582892",
+    appId: "1:1050614582892:web:f7ffec360148dc17da1249",
+    measurementId: "G-44V1SE1GEF",
 };
 
 export default config;
