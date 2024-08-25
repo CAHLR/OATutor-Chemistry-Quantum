@@ -1,0 +1,41 @@
+[
+    {
+        "courseName": "Chemistry",
+        "courseOER": "https://openstax.org/ <OpenStax>",
+        "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+        "lessons": [
+            {
+                "id": "4GRWDRDl-lqs6-4gccTB13434",
+                "name": "Control",
+                "topics": "",
+                "allowRecycle": false,
+                "giveStuFeedback": true,
+                "doMasteryUpdate": false,
+                "showStuMastery": false,
+                "unlockFirstHint": true,
+                "giveStuBottomHintOnly": true,
+                "learningObjectives": {
+                    "stoichiometry": 0.85,
+                    "post_test": 0.85,
+                    "pre_test": 0.85
+                }
+            },
+            {
+                "id": "7ArO5Wnm-m5E2-EL699amKGH",
+                "name": "Experiment",
+                "topics": "",
+                "allowRecycle": false,
+                "giveStuFeedback": true,
+                "doMasteryUpdate": false,
+                "showStuMastery": false,
+                "unlockFirstHint": true,
+                "giveStuBottomHintOnly": false,
+                "learningObjectives": {
+                    "stoichiometry": 0.85,
+                    "post_test": 0.85,
+                    "pre_test": 0.85
+                }
+            }
+        ]
+    }
+]

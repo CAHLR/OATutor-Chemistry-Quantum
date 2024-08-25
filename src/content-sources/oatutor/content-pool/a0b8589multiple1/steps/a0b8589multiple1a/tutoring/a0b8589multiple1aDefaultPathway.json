@@ -1,0 +1,140 @@
+[
+    {
+        "id": "a0b8589multiple1a-h1",
+        "type": "hint",
+        "dependencies": [],
+        "title": "Check for a Balanced Equation",
+        "text": "Check if the equation is balanced or not. If not, balance the equation.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h2",
+        "type": "hint",
+        "dependencies": [
+            "a0b8589multiple1a-h1"
+        ],
+        "title": "Calculate the Molar Amount of $$CuSO_4$$",
+        "text": "Use the equation $$\\text{Moles of Reactant A} = \\text{Mass of Reactant A} \\times \\frac{\\text{Moles of Reactant A}}{\\text{Molar Mass of Reactant A}}$$.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h3",
+        "type": "scaffold",
+        "problemType": "TextBox",
+        "answerType": "arithmetic",
+        "hintAnswer": [
+            "$$0.008$$"
+        ],
+        "dependencies": [
+            "a0b8589multiple1a-h2"
+        ],
+        "title": "Calculate the Molar Amount of $$CuSO_4$$",
+        "text": "What is $$(1.274 \\text{ g } CuSO_4) \\times \\frac{1 \\text{ mol } CuSO_4}{159.62 \\text{ g } CuSO_4}$$? Keep three decimal places.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h4",
+        "type": "hint",
+        "dependencies": [
+            "a0b8589multiple1a-h3"
+        ],
+        "title": "Identify the Stoichiometric Factor",
+        "text": "The stoichiometric factor relating the two substances of interest is $$\\frac{1 \\text{ mol Cu}}{1 \\text{ mol } CuSO_4}$$.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h5",
+        "type": "hint",
+        "dependencies": [
+            "a0b8589multiple1a-h4"
+        ],
+        "title": "Calculate the Molar Amount of Cu",
+        "text": "The molar amount of Cu is derived by multiplying the provided molar amount of $$CuSO_4$$ by the stoichiometric factor.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h6",
+        "type": "scaffold",
+        "problemType": "TextBox",
+        "answerType": "arithmetic",
+        "hintAnswer": [
+            "$$0.008$$"
+        ],
+        "dependencies": [
+            "a0b8589multiple1a-h5"
+        ],
+        "title": "Calculate the Molar Amount of Cu",
+        "text": "What is $$0.008 \\text{ mol } CuSO_4 \\times \\frac{1 \\text{ mol Cu}}{1 \\text{ mol } CuSO_4}$$? Keep three decimal places.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h7",
+        "type": "hint",
+        "dependencies": [
+            "a0b8589multiple1a-h6"
+        ],
+        "title": "Calculate the Mass of Cu",
+        "text": "Calculate the $$\\text{Mass of Cu with Mass of Reactant A} = \\left(\\frac{\\text{Molar Mass of Reactant A}}{\\text{Moles of Reactant A}}\\right) \\times \\text{Moles of Reactant A}$$",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h8",
+        "type": "scaffold",
+        "problemType": "TextBox",
+        "answerType": "arithmetic",
+        "hintAnswer": [
+            "$$0.508$$"
+        ],
+        "dependencies": [
+            "a0b8589multiple1a-h7"
+        ],
+        "title": "Calculate the Mass of Cu",
+        "text": "What is $$(0.008 \\text{ mol Cu}) \\times \\frac{63.55 \\text{ g Cu}}{1 \\text{mol Cu}}$$? Keep three decimal places.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h9",
+        "type": "hint",
+        "dependencies": [
+            "a0b8589multiple1a-h8"
+        ],
+        "title": "Calculate the Percentage Yield",
+        "text": "Calculate the percentage yield with $$___$$ $$\\text{\\% yield} = \\frac{\\text{Experimental (actual) yield of product C}}{\\text{Theoretical (calculated) yield of product C}} \\times 100$$.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    },
+    {
+        "id": "a0b8589multiple1a-h10",
+        "type": "scaffold",
+        "problemType": "TextBox",
+        "answerType": "arithmetic",
+        "hintAnswer": [
+            "$$77$$"
+        ],
+        "dependencies": [
+            "a0b8589multiple1a-h9"
+        ],
+        "title": "Calculate the Percentage Yield",
+        "text": "What is $$\\frac{0.392 \\text{ g Cu}}{0.508 \\text{ g Cu}}$$? Give your answer as an integer.",
+        "variabilization": {},
+        "oer": "",
+        "license": ""
+    }
+]
