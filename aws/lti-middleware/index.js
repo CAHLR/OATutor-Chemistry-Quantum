@@ -523,7 +523,7 @@ app.post(
             `;
 
         if (result.size == 0) {
-            formattedText = "No student activity found for this lesson.";
+            formattedText = "Hello";
         }
 
         const text = `
