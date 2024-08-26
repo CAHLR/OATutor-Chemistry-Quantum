@@ -111,6 +111,8 @@ class Problem extends React.Component {
                     }),
                 })
             );
+
+            console.log(response)
             if (err || !response) {
                 toast.error(
                     `An unknown error occurred trying to submit this problem. If reloading does not work, please contact us.`,
