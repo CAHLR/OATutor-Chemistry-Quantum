@@ -8,5 +8,6 @@
     "stepBody": "Please round to the nearest whole number.",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$22$$"
+    "answerLatex": "$$22$$",
+    "tolerance": 1.0
 }

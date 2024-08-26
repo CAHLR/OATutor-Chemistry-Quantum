@@ -217,6 +217,7 @@ class ProblemCard extends React.Component {
             answerType,
             stepBody,
             stepTitle,
+            tolerance
         } = this.step;
         const { seed, problemVars, problemID, courseName, answerMade, lesson } =
             this.props;
@@ -231,6 +232,7 @@ class ProblemCard extends React.Component {
                 seed
             ),
             questionText: stepBody.trim() || stepTitle.trim(),
+            tolerance: tolerance
         });
 
         const isCorrect = !!correctAnswer;
@@ -436,7 +438,7 @@ class ProblemCard extends React.Component {
                 this.props.seed
             ),
             questionText:
-                this.step.stepBody.trim() || this.step.stepTitle.trim(),
+                this.step.stepBody.trim() || this.step.stepTitle.trim()
         });
 
         const isCorrect = !!correctAnswer;

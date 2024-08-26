@@ -15,8 +15,9 @@ function _equality(attempt, actual) {
     const parsedAttempt = attempt.replace(/\s+/g, '').replace(/\\left/g, '').replace(/\\right/g, '');
     return actual.filter(stepAns => {
         const parsedStepAns = stepAns.replace(/\s+/g, '').replace(/\\left/g, '').replace(/\\right/g, '');
-        //console.log("parsedAttempt: " + parsedAttempt + " parsedStepAns: " + parsedStepAns);
-        return parsedAttempt === parsedStepAns
+        
+        // Default exact match comparison
+        return parsedAttempt === parsedStepAns;
     });
 }
 
@@ -94,7 +95,7 @@ function validateAndCorrectFormat(input) {
  * @param questionText {string} allows for a check to see if student pasted in the answer exactly
  * @returns {[string, boolean | string, null | WrongAnswerReasons]}
  */
-function checkAnswer({ attempt, actual, answerType, precision = 5, variabilization = {}, questionText = ""}) {
+function checkAnswer({ attempt, actual, answerType, precision = 5, variabilization = {}, questionText = "", tolerance = 0}) {
     let parsed = attempt.replace(/\s+/g, '');
     if (variabilization) {
         actual = actual.map((actualAns) => variabilize(actualAns, variabilization));
@@ -152,6 +153,17 @@ function checkAnswer({ attempt, actual, answerType, precision = 5, variabilizati
 
                 if (correctAnswers.length > 0) {
                     return [parsed.print(), correctAnswers[0], null]
+                }
+
+                correctAnswers = actual.filter(stepAns => {
+                    const parsedStepAns = parse(stepAns).expr;
+                    const difference = Math.abs(parsed.eval() - parsedStepAns.eval());
+                    const roundedDifference = Math.round(difference * 1000) / 1000;
+                    return roundedDifference <= tolerance;
+                });
+
+                if (correctAnswers.length > 0) {
+                    return [parsed.print(), correctAnswers[0], null];
                 }
 
                 return [parsed.print(), false, WrongAnswerReasons.wrong];

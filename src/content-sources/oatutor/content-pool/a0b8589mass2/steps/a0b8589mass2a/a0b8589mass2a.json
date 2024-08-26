@@ -8,5 +8,6 @@
     "stepBody": "Please give your answer in scientific notation.",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$2.46\\times {10}^3$$"
+    "answerLatex": "$$2.46\\times {10}^3$$",
+    "tolerance": 0.1
 }

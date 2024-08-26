@@ -8,5 +8,6 @@
     "stepBody": "",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$13$$"
+    "answerLatex": "$$13$$",
+    "tolerance": 1.0
 }

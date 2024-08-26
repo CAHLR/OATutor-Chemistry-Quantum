@@ -8,5 +8,6 @@
     "stepBody": "Please give your answer as an integer.",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$93$$"
+    "answerLatex": "$$93$$",
+    "tolerance": 1.0
 }

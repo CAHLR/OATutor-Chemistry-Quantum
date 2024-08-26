@@ -8,5 +8,6 @@
     "stepBody": "In the combustion reaction given above, $$112$$ g of $$O_2$$ to reacts with $$195$$ g ethene ($$C_2H_4$$). Find the mass (g) of $$CO_2$$ formed in the reaction (round your answer to three significant figures).",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$103$$"
+    "answerLatex": "$$103$$",
+    "tolerance": 1.0
 }

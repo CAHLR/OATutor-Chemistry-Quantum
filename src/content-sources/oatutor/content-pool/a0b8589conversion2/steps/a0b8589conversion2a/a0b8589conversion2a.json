@@ -8,5 +8,6 @@
     "stepBody": "Please round to two decimal places.",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$2.04$$"
+    "answerLatex": "$$2.04$$",
+    "tolerance": 0.1
 }

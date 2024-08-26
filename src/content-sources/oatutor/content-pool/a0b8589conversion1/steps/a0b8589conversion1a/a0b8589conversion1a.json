@@ -8,5 +8,6 @@
     "stepBody": "Please round to $$3$$ decimal places.##figure1.gif## ",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$0.644$$"
+    "answerLatex": "$$0.644$$",
+    "tolerance": 0.01
 }
