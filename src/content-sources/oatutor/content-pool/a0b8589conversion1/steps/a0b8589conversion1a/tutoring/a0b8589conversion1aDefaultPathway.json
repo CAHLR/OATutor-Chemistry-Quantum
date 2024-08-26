@@ -48,6 +48,7 @@
         "text": "What is $$0.429\\text{mol Al}\\times\\frac{3\\text{mol } I_2}{2\\text{mol Al}}$$?",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     }
 ]

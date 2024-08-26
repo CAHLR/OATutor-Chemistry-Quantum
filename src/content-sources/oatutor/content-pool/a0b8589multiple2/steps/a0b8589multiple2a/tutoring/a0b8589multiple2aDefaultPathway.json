@@ -36,7 +36,8 @@
         "text": "What is $$1.31 \\text{ g } CaCO_3 \\times \\frac{1 \\text{ mol } CaCO_3}{100.09 \\text{ g } CaCO_3}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589multiple2a-h4",
@@ -77,7 +78,8 @@
         "text": "What is $$0.013 \\text{ mol } CO_2 \\times \\frac{1 \\text{ mol CO}_2}{1 \\text{ mol } CaCO_3}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589multiple2a-h7",
@@ -106,7 +108,8 @@
         "text": "What is $$0.013 \\text{ mol } CO_2 \\times \\frac{44.01 \\text{ g } CO_2}{1 \\text{mol } CO_2}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589multiple2a-h9",
@@ -135,6 +138,7 @@
         "text": "What is $$\\frac{0.53 \\text{ g } CO_2}{0.572 \\text{ g } CO_2}$$? Give your answer as an integer.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 1.0
     }
 ]

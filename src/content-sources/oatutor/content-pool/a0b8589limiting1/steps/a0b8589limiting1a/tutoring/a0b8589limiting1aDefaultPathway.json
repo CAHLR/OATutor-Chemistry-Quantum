@@ -36,7 +36,8 @@
         "text": "Keep four decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.001
     },
     {
         "id": "a0b8589limiting1a-h4",
@@ -53,7 +54,8 @@
         "text": "Keep four decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.001
     },
     {
         "id": "a0b8589limiting1a-h5",
@@ -82,7 +84,8 @@
         "text": "Keep four demical places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.001
     },
     {
         "id": "a0b8589limiting1a-h7",
@@ -96,10 +99,11 @@
             "a0b8589limiting1a-h5"
         ],
         "title": "Find the Amount of Moles of $$\\text{Si}_3\\text{N}_4$$ formed from $$N_2$$",
-        "text": "Keep four demical places.",
+        "text": "Keep four decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.001
     },
     {
         "id": "a0b8589limiting1a-h8",

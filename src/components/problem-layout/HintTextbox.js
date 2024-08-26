@@ -37,13 +37,16 @@ class HintTextbox extends React.Component {
     }
 
     submit = () => {
+        console.log("HERE")
+        console.log(this.hint)
         const [parsed, correctAnswer, reason] = checkAnswer({
             attempt: this.state.inputVal,
             actual: this.hint.hintAnswer,
             answerType: this.hint.answerType,
             precision: this.hint.precision,
             variabilization: chooseVariables(this.props.hintVars, this.props.seed),
-            questionText: this.hint.text
+            questionText: this.hint.text,
+            tolerance: this.hint.tolerance
         });
         this.props.submitHint(parsed, this.hint, correctAnswer, this.props.hintNum);
 

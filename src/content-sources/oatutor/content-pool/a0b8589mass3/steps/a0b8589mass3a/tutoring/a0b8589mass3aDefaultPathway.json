@@ -36,7 +36,8 @@
         "text": "What is $$25.13 \\text{ g } Fe_2O_3 \\times \\frac{1 \\text{ mol } Fe_2O_3}{159.7 \\text{ g } Fe_2O_3}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589mass3a-h4",
@@ -77,7 +78,8 @@
         "text": "What is $$0.157 \\text{ mol } Fe_2O_3 \\times \\frac{3 \\text{ mol CO}}{1 \\text{ mol } Fe_2O_3}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589mass3a-h7",
@@ -106,6 +108,7 @@
         "text": "What is $$(0.471 \\text{ mol CO}) \\times \\frac{28.01 \\text{ g CO}}{1 \\text{mol CO}}$$? Give your answer as an integer.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 1.0
     }
 ]

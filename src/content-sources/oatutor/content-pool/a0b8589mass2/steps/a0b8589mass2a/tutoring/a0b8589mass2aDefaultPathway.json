@@ -36,7 +36,8 @@
         "text": "What is $$702 \\text{ g } \\text{C}_8\\text{H}_{18} \\times \\frac{1 \\text{ mol } \\text{C}_8\\text{H}_{18}}{114.23 \\text{ g } \\text{C}_8\\text{H}_{18}}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589mass2a-h4",
@@ -77,7 +78,8 @@
         "text": "What is $$6.145 \\text{ mol } \\text{C}_8\\text{H}_{18} \\times \\frac{25 \\text{ mol } O_2}{2 \\text{ mol } \\text{C}_8\\text{H}_{18}}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.1
     },
     {
         "id": "a0b8589mass2a-h7",
@@ -106,6 +108,7 @@
         "text": "What is $$76.819 \\text{ mol } \\text{O}_2 \\times \\frac{32.0 \\text{ g } \\text{O}_2}{1 \\text{mol } \\text{O}_2}$$? Give your answer in scientific notation.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.1
     }
 ]

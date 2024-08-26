@@ -36,7 +36,8 @@
         "text": "What is $$16 \\text{ g } \\text{Mg(OH)}_2 \\times \\frac{1 \\text{ mol } \\text{Mg(OH)}_2}{58.3 \\text{ g } \\text{Mg(OH)}_2}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589mass1a-h4",
@@ -77,7 +78,8 @@
         "text": "What is $$0.274 \\text{ mol } \\text{Mg(OH)}_2 \\times \\frac{2 \\text{ mol NaOH}}{1 \\text{ mol } \\text{Mg(OH)}_2}$$? Keep three decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.01
     },
     {
         "id": "a0b8589mass1a-h7",
@@ -106,6 +108,7 @@
         "text": "What is $$0.548 \\text{ mol NaOH} \\times \\frac{40.0 \\text{ g NaOH}}{1 \\text{mol NaOH}}$$? Give your answer as an integer.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 1.0
     }
 ]

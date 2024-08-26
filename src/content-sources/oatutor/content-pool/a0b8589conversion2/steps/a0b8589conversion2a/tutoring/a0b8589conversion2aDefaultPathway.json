@@ -45,9 +45,10 @@
             "a0b8589conversion2a-h3"
         ],
         "title": "Calculate the Molar Amount of $$\\text{Ca}\\left(OH\\right) _2$$",
-        "text": "What is $$1.36\\text{mol}\\text{H}_3\\text{PO}_4)\\times\\frac{3 \\text{mol}\\text{Ca(OH)}_2}{2\\text{mol}\\text{H}_3\\text{PO}_4}?$$ Keep two decimal places.",
+        "text": "What is $$1.36\\text{mol}\\text{H}_3\\text{PO}_4\\times\\frac{3 \\text{mol}\\text{Ca(OH)}_2}{2\\text{mol}\\text{H}_3\\text{PO}_4}?$$ Keep two decimal places.",
         "variabilization": {},
         "oer": "",
-        "license": ""
+        "license": "",
+        "tolerance": 0.1
     }
 ]
