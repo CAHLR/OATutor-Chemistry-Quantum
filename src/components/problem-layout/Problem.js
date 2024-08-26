@@ -112,6 +112,7 @@ class Problem extends React.Component {
                 })
             );
 
+            console.log(components)
             console.log(response)
             if (err || !response) {
                 toast.error(
