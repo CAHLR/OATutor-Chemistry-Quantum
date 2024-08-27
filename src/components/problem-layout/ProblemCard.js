@@ -312,7 +312,6 @@ class ProblemCard extends React.Component {
                 }
             );
         }
-        this.generateHintFromGPT();
     };
 
     unlockHint = (hintNum, hintType) => {
@@ -417,70 +416,6 @@ class ProblemCard extends React.Component {
         };
 
         return { quest, prompt_template, bio_info };
-    };
-
-    generateHintFromGPT = async () => {
-        // console.log(this.generateGPTHintParameters(this.prompt_template));
-        this.setState({
-            dynamicHint: "",
-        });
-        const [parsed, correctAnswer, reason] = checkAnswer({
-            attempt: this.state.inputVal,
-            actual: this.step.stepAnswer,
-            answerType: this.step.answerType,
-            precision: this.step.precision,
-            variabilization: chooseVariables(
-                Object.assign(
-                    {},
-                    this.props.problemVars,
-                    this.props.variabilization
-                ),
-                this.props.seed
-            ),
-            questionText:
-                this.step.stepBody.trim() || this.step.stepTitle.trim()
-        });
-
-        const isCorrect = !!correctAnswer;
-
-        axios
-            .post(
-                DYNAMIC_HINT_URL,
-                this.generateGPTHintParameters(
-                    this.prompt_template,
-                    this.state.bioInfo
-                )
-            )
-            .then((response) => {
-                this.setState({
-                    dynamicHint: response.data.hint,
-                });
-                this.context.firebase.log(
-                    parsed,
-                    this.props.problemID,
-                    this.step,
-                    "",
-                    isCorrect,
-                    this.state.hintsFinished,
-                    "requestDynamicHint",
-                    chooseVariables(
-                        Object.assign(
-                            {},
-                            this.props.problemVars,
-                            this.props.variabilization
-                        ),
-                        this.props.seed
-                    ),
-                    this.props.lesson,
-                    this.props.courseName,
-                    "dynamic",
-                    this.state.dynamicHint,
-                    this.state.bioInfo
-                );
-            })
-            .catch((error) => {
-                console.error(error);
-            });
     };
 
     render() {

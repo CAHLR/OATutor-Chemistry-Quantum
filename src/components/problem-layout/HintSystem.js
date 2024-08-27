@@ -49,9 +49,7 @@ class HintSystem extends React.Component {
 
         if (this.unlockFirstHint && this.props.hintStatus.length > 0) {
             this.props.unlockHint(0, this.props.hints[0].type);
-        }
-
-        if (this.giveHintOnIncorrect && this.isIncorrect && this.props.hintStatus.length > 0) {
+        } else if (this.giveHintOnIncorrect && this.isIncorrect && this.props.hintStatus.length > 0) {
             this.props.unlockHint(0, this.props.hints[0].type);
         }
     }
