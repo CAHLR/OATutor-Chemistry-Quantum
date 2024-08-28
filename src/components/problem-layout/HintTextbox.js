@@ -59,9 +59,7 @@ class HintTextbox extends React.Component {
 
         const isCorrect = !!correctAnswer
 
-        if (!isCorrect) {
-            this.props.toggleHints(this.hintNum, this.props.hint.type)
-        }
+        this.props.toggleHints(this.hintNum, this.props.hint.type)
 
         toastNotifyCorrectness(isCorrect, reason);
 
