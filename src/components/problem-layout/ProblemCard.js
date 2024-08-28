@@ -29,7 +29,7 @@ import { stagingProp } from "../../util/addStagingProperty";
 import ErrorBoundary from "../ErrorBoundary";
 import {
     toastNotifyCompletion,
-    toastNotifyCorrectness,
+    toastNotifyCorrectness, toastNotifyEmpty
 } from "./ToastNotifyCorrectness";
 import { joinList } from "../../util/formListString";
 import axios from "axios";
@@ -221,6 +221,11 @@ class ProblemCard extends React.Component {
         } = this.step;
         const { seed, problemVars, problemID, courseName, answerMade, lesson } =
             this.props;
+
+        if (inputVal == '') {
+            toastNotifyEmpty()
+            return;
+        }
 
         const [parsed, correctAnswer, reason] = checkAnswer({
             attempt: inputVal,
@@ -561,32 +566,6 @@ class ProblemCard extends React.Component {
                     >
                         <Grid item xs={false} sm={false} md={4} />
                         <Grid item xs={4} sm={4} md={1}>
-                            {this.showHints && (
-                                <center>
-                                    <IconButton
-                                        aria-label="delete"
-                                        onClick={this.toggleHints}
-                                        title="View available hints"
-                                        disabled={
-                                            !this.state.enableHintGeneration
-                                        }
-                                        className="image-container"
-                                        {...stagingProp({
-                                            "data-selenium-target": `hint-button-${this.props.index}`,
-                                        })}
-                                    >
-                                        <img
-                                            src={`${process.env.PUBLIC_URL}/static/images/icons/raise_hand.png`}
-                                            className={
-                                                this.state.enableHintGeneration
-                                                    ? "image"
-                                                    : "image image-grayed-out"
-                                            }
-                                            alt="hintToggle"
-                                        />
-                                    </IconButton>
-                                </center>
-                            )}
                         </Grid>
                         <Grid item xs={4} sm={4} md={2}>
                             <center>

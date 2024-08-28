@@ -39,7 +39,7 @@
         "dependencies": [
             "a0b8589limiting2a-h2"
         ],
-        "title": "Find the Amount of Moles of HCl formed from Cl",
+        "title": "Find the Amount of Moles of HCl formed from $$Cl_2$$",
         "text": "$$\\text{mol HCl produced} = 2 \\text{ mol Cl}_2 \\times \\frac{2 \\text{ mol HCl}}{1 \\text{ mol Cl}_2} = 4 \\text{ mol HCl}$$",
         "variabilization": {},
         "oer": "",

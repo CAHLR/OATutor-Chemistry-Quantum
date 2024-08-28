@@ -360,25 +360,6 @@ class Platform extends React.Component {
                                     isPrivileged={this.isPrivileged}
                                 />
                             </Grid>
-                            <Grid item xs={6} key={2}>
-                                <div
-                                    style={{
-                                        textAlign: "center",
-                                        textAlignVertical: "center",
-                                        paddingTop: "3px",
-                                    }}
-                                >
-                                    {Boolean(
-                                        findLessonById(this.props.lessonID)
-                                    )
-                                        ? findLessonById(this.props.lessonID)
-                                              .name +
-                                          " " +
-                                          findLessonById(this.props.lessonID)
-                                              .topics
-                                        : ""}
-                                </div>
-                            </Grid>
                             <Grid item xs={3} key={3}>
                                 <div
                                     style={{

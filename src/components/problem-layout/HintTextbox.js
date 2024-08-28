@@ -11,6 +11,9 @@ import ProblemInput from "../problem-input/ProblemInput";
 import { stagingProp } from "../../util/addStagingProperty";
 import { toastNotifyCorrectness } from "./ToastNotifyCorrectness";
 import { joinList } from "../../util/formListString";
+import {
+    toastNotifyEmpty
+} from "./ToastNotifyCorrectness";
 
 class HintTextbox extends React.Component {
     static contextType = ThemeContext;
@@ -46,9 +49,19 @@ class HintTextbox extends React.Component {
             questionText: this.hint.text,
             tolerance: this.hint.tolerance
         });
+
+        if (parsed == '') {
+            toastNotifyEmpty()
+            return;
+        }
+
         this.props.submitHint(parsed, this.hint, correctAnswer, this.props.hintNum);
 
         const isCorrect = !!correctAnswer
+
+        if (!isCorrect) {
+            this.props.toggleHints(this.hintNum, this.props.hint.type)
+        }
 
         toastNotifyCorrectness(isCorrect, reason);
 
@@ -97,25 +110,9 @@ class HintTextbox extends React.Component {
                 <Grid container spacing={0} justifyContent="center" alignItems="center">
                     <Grid item xs={false} sm={false} md={4}/>
                     <Grid item xs={4} sm={4} md={1}>
-                        {this.props.type !== "subHintTextbox" && this.hint.subHints !== undefined ?
-                            <center>
-                                <IconButton aria-label="delete" onClick={this.props.toggleHints}
-                                            title="View available hints"
-                                            disabled={(use_expanded_view && debug)}
-                                            {...stagingProp({
-                                                "data-selenium-target": `hint-button-${hintIndex}`
-                                            })}
-                                >
-                                    <img src={`${process.env.PUBLIC_URL}/static/images/icons/raise_hand.png`}
-                                         alt="hintToggle"/>
-                                </IconButton>
-                            </center> :
-                            <img src={'/static/images/icons/raise_hand.png'}
-                                 alt="hintToggle"
-                                 style={{ visibility: "hidden" }}/>
-                        }
                     </Grid>
                     <Grid item xs={4} sm={4} md={2}>
+                    <br></br>
                         <center>
                             <Button className={classes.button} style={{ width: "80%" }} size="small"
                                     onClick={this.submit}

@@ -81,7 +81,7 @@ class HintSystem extends React.Component {
         this.setState(
             (prevState) => {
                 var displayHints = prevState.showSubHints;
-                displayHints[i] = !displayHints[i];
+                displayHints[i] = true;
                 return {
                     showSubHints: displayHints,
                 };
