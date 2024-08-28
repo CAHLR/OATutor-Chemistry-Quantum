@@ -6,7 +6,7 @@
         "lessons": [
             {
                 "id": "4GRWDRDl-lqs6-4gccTB13434",
-                "name": "Chemistry Control",
+                "name": "Control",
                 "topics": "",
                 "allowRecycle": false,
                 "giveStuFeedback": true,
@@ -22,7 +22,7 @@
             },
             {
                 "id": "7ArO5Wnm-m5E2-EL699amKGH",
-                "name": "Chemistry Experiment",
+                "name": "Experiment",
                 "topics": "",
                 "allowRecycle": false,
                 "giveStuFeedback": true,

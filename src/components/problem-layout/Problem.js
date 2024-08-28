@@ -476,7 +476,7 @@ class Problem extends React.Component {
                                     answerMade={this.answerMade}
                                     seed={seed}
                                     problemVars={problem.variabilization}
-                                    lesson={problem.lesson}
+                                    lesson={this.props.lesson.name}
                                     courseName={problem.courseName}
                                     problemTitle={problem.title}
                                     problemSubTitle={problem.body}

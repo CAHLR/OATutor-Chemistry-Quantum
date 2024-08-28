@@ -357,7 +357,7 @@ app.post(
                 (lesson) => lesson.id === linkedLesson
             );
             if (idxOfFind > -1) {
-                lessonName = "Stoichiometry";
+                lessonName = lessons[idxOfFind].name;
             }
         }
 
