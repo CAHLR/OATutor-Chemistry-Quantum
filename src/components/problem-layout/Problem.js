@@ -269,7 +269,7 @@ class Problem extends React.Component {
             let score = (numberOfCompletedSteps * 100) / 13;
 
             //console.log(this.context.studentName + " " + score);
-            this.props.displayMastery(score);
+            //this.props.displayMastery(score);
 
             const relevantKc = {};
             Object.keys(lesson.learningObjectives).forEach((x) => {
