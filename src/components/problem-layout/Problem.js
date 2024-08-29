@@ -262,23 +262,19 @@ class Problem extends React.Component {
 
         updateCompletedSteps(newCompletedSteps);
 
-        if (!this.context.debug) {
-            const objectives = Object.keys(lesson.learningObjectives);
-            objectives.unshift(0);
-            let numberOfCompletedSteps = completedSteps.size;
-            let score = (numberOfCompletedSteps * 100) / 13;
-            score /= 100
+        const objectives = Object.keys(lesson.learningObjectives);
+        objectives.unshift(0);
+        let numberOfCompletedSteps = completedSteps.size;
+        let score = (numberOfCompletedSteps * 100) / 13;
+        score /= 100
+        console.log(score)
 
-            //console.log(this.context.studentName + " " + score);
-            //this.props.displayMastery(score);
-
-            const relevantKc = {};
-            Object.keys(lesson.learningObjectives).forEach((x) => {
+        const relevantKc = {};
+        Object.keys(lesson.learningObjectives).forEach((x) => {
                 relevantKc[x] = this.bktParams[x].probMastery;
-            });
+        });
 
-            this.updateCanvas(score, relevantKc);
-        }
+        this.updateCanvas(score, relevantKc);
 
         const nextStepStates = {
             ...stepStates,
