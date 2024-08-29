@@ -9,6 +9,7 @@ import {
     coursePlans,
     findLessonById,
     LESSON_PROGRESS_STORAGE_KEY,
+    STEP_PROGRESS_STORAGE_KEY,
     MIDDLEWARE_URL,
     SITE_NAME,
     ThemeContext,
@@ -33,6 +34,9 @@ class Platform extends React.Component {
 
     constructor(props, context) {
         super(props);
+        this.state = {
+            prevCompletedSteps: new Set(),
+        };
 
         this.orderedProblemIds = ["ae4b921pre-test", "a0b8589conversion1", "a0b8589conversion2", "a0b8589mass1", "a0b8589mass2", "a0b8589mass3", "a0b8589limiting2", "a0b8589limiting1", "a0b8589multiple1", "a0b8589multiple2", "ae4b921post-test"];
         
@@ -95,6 +99,22 @@ class Platform extends React.Component {
             this.selectCourse(coursePlans[parseInt(this.props.courseNum)]);
         }
         this.onComponentUpdate(null, null, null);
+
+        const savedSteps = localStorage.getItem(STEP_PROGRESS_STORAGE_KEY(this.props.lessonID));
+        if (savedSteps) {
+            this.setState({ prevCompletedSteps: new Set(JSON.parse(savedSteps)) });
+        }
+    }
+
+    updateCompletedSteps = (newCompletedSteps) => {
+        this.setState({ prevCompletedSteps: new Set(newCompletedSteps) });
+
+        localStorage.setItem(
+            STEP_PROGRESS_STORAGE_KEY(this.lesson.id),
+            JSON.stringify(Array.from(newCompletedSteps))
+        );
+
+        console.log(newCompletedSteps)
     }
 
     componentWillUnmount() {
@@ -231,9 +251,18 @@ class Platform extends React.Component {
             ).catch((err) => {});
         };
 
-        const [, prevCompletedProbs] = await Promise.all([
+        const loadStepProgress = async () => {
+            const { getByKey } = this.context.browserStorage;
+            return await getByKey(
+                STEP_PROGRESS_STORAGE_KEY(this.lesson.id)
+            ).catch((err) => {});
+        };
+        
+
+        const [, prevCompletedProbs, prevCompletedSteps] = await Promise.all([
             this.props.loadBktProgress(),
             loadLessonProgress(),
+            loadStepProgress(),
         ]);
         if (!this._isMounted) {
             console.debug("component not mounted, returning early (2)");
@@ -246,6 +275,12 @@ class Platform extends React.Component {
             );
             this.completedProbs = new Set(prevCompletedProbs);
         }
+
+        if (prevCompletedSteps) {
+            console.debug("student has already completed steps in this lesson before", prevCompletedSteps);
+            this.completedSteps = new Set(prevCompletedSteps);
+        }
+
         this.setState(
             {
                 currProblem: this._nextProblem(
@@ -407,6 +442,8 @@ class Platform extends React.Component {
                         descriptor={"problem"}
                     >
                         <Problem
+                            completedSteps={this.state.prevCompletedSteps}
+                            updateCompletedSteps={this.updateCompletedSteps}
                             problem={this.state.currProblem}
                             problemComplete={this.problemComplete}
                             lesson={this.lesson}

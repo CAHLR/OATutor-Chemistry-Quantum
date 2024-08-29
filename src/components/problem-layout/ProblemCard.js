@@ -273,7 +273,7 @@ class ProblemCard extends React.Component {
             isCorrect,
             checkMarkOpacity: isCorrect ? "100" : "0",
         });
-        answerMade(this.index, knowledgeComponents, isCorrect);
+        answerMade(this.index, knowledgeComponents, isCorrect, this.step.id);
     };
 
     editInput = (event) => {
@@ -309,7 +309,8 @@ class ProblemCard extends React.Component {
                     this.props.answerMade(
                         this.index,
                         this.step.knowledgeComponents,
-                        false
+                        false,
+                        this.step.id
                     );
                 }
             );
@@ -325,7 +326,7 @@ class ProblemCard extends React.Component {
 
         if (hintsFinished.reduce((a, b) => a + b) === 0 && isCorrect !== true) {
             this.setState({ usedHints: true });
-            answerMade(this.index, knowledgeComponents, false);
+            answerMade(this.index, knowledgeComponents, false, this.step.id);
         }
 
         // If the user has not opened a scaffold before, mark it as in-progress.

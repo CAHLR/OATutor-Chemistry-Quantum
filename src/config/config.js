@@ -75,6 +75,9 @@ const PROGRESS_STORAGE_KEY = `${_SHORT_SITE_NAME}-progress`;
 export const LESSON_PROGRESS_STORAGE_KEY = (lessonId) =>
     `${PROGRESS_STORAGE_KEY}-${lessonId}`;
 
+export const STEP_PROGRESS_STORAGE_KEY = (lessonId) =>
+    `${PROGRESS_STORAGE_KEY}-${lessonId}-steps`;
+
 const CANVAS_WARNING_STORAGE_KEY = `${_SHORT_SITE_NAME}-canvas-warning-dismissed`;
 
 // Firebase Config

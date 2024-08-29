@@ -17,6 +17,7 @@ import {
     SITE_VERSION,
     ThemeContext,
     USER_ID_STORAGE_KEY,
+    STEP_PROGRESS_STORAGE_KEY
 } from "./config/config.js";
 import {
     createTheme,
@@ -213,6 +214,7 @@ class App extends React.Component {
         await Promise.allSettled(
             lessonStorageKeys.map(async (key) => await removeByKey(key))
         );
+
         this.bktParams = this.getTreatmentObject(treatmentMapping.bktParams);
         window.location.reload();
     };

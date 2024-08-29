@@ -22,7 +22,8 @@ import withTranslation from "../../util/withTranslation.js"
 import {
     CANVAS_WARNING_STORAGE_KEY,
     MIDDLEWARE_URL,
-    SHOW_NOT_CANVAS_WARNING,
+    SHOW_NOT_CANVAS_WARNING, 
+    STEP_PROGRESS_STORAGE_KEY,
     SITE_NAME,
     ThemeContext,
 } from "../../config/config.js";
@@ -38,6 +39,7 @@ class Problem extends React.Component {
 
     constructor(props, context) {
         super(props);
+        this.completedSteps = new Set();
         this.bktParams = context.bktParams;
         this.heuristic = context.heuristic;
 
@@ -216,9 +218,9 @@ class Problem extends React.Component {
         }
     };
 
-    answerMade = (cardIndex, kcArray, isCorrect) => {
+    answerMade = async (cardIndex, kcArray, isCorrect, stepId) => {
         const { stepStates, firstAttempts } = this.state;
-        const { lesson, problem } = this.props;
+        const { lesson, problem, completedSteps, updateCompletedSteps } = this.props;
 
         console.debug(`answer made and is correct: ${isCorrect}`);
 
@@ -252,13 +254,20 @@ class Problem extends React.Component {
             }
         }
 
+        const newCompletedSteps = new Set(completedSteps);
+
+        if(stepId) {
+            newCompletedSteps.add(stepId);
+        }
+
+        updateCompletedSteps(newCompletedSteps);
+
         if (!this.context.debug) {
             const objectives = Object.keys(lesson.learningObjectives);
             objectives.unshift(0);
-            let score = objectives.reduce((x, y) => {
-                return x + this.bktParams[y].probMastery;
-            });
-            score /= objectives.length - 1;
+            let numberOfCompletedSteps = completedSteps.size;
+            let score = (numberOfCompletedSteps * 100) / 13;
+
             //console.log(this.context.studentName + " " + score);
             this.props.displayMastery(score);
 
