@@ -267,6 +267,7 @@ class Problem extends React.Component {
             objectives.unshift(0);
             let numberOfCompletedSteps = completedSteps.size;
             let score = (numberOfCompletedSteps * 100) / 13;
+            score /= 100
 
             //console.log(this.context.studentName + " " + score);
             //this.props.displayMastery(score);
