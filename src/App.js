@@ -207,6 +207,10 @@ class App extends React.Component {
     removeProgress = async () => {
         const { getKeys, removeByKey } = this.browserStorage;
         await removeByKey(PROGRESS_STORAGE_KEY);
+        localStorage.setItem(
+            STEP_PROGRESS_STORAGE_KEY(),
+            JSON.stringify(Array.from(new Set()))
+        );
         const existingKeys = (await getKeys()) || [];
         const lessonStorageKeys = existingKeys.filter((key) =>
             key.startsWith(PROGRESS_STORAGE_KEY)

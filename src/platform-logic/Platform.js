@@ -100,21 +100,19 @@ class Platform extends React.Component {
         }
         this.onComponentUpdate(null, null, null);
 
-        const savedSteps = localStorage.getItem(STEP_PROGRESS_STORAGE_KEY(this.props.lessonID));
+        const savedSteps = localStorage.getItem(STEP_PROGRESS_STORAGE_KEY());
         if (savedSteps) {
             this.setState({ prevCompletedSteps: new Set(JSON.parse(savedSteps)) });
         }
     }
 
-    updateCompletedSteps = (newCompletedSteps) => {
+    updateCompletedSteps = async (newCompletedSteps) => {
         this.setState({ prevCompletedSteps: new Set(newCompletedSteps) });
 
         localStorage.setItem(
-            STEP_PROGRESS_STORAGE_KEY(this.lesson.id),
+            STEP_PROGRESS_STORAGE_KEY(),
             JSON.stringify(Array.from(newCompletedSteps))
         );
-
-        console.log(newCompletedSteps)
     }
 
     componentWillUnmount() {
@@ -254,7 +252,7 @@ class Platform extends React.Component {
         const loadStepProgress = async () => {
             const { getByKey } = this.context.browserStorage;
             return await getByKey(
-                STEP_PROGRESS_STORAGE_KEY(this.lesson.id)
+                STEP_PROGRESS_STORAGE_KEY()
             ).catch((err) => {});
         };
         

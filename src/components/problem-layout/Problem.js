@@ -22,8 +22,7 @@ import withTranslation from "../../util/withTranslation.js"
 import {
     CANVAS_WARNING_STORAGE_KEY,
     MIDDLEWARE_URL,
-    SHOW_NOT_CANVAS_WARNING, 
-    STEP_PROGRESS_STORAGE_KEY,
+    SHOW_NOT_CANVAS_WARNING,
     SITE_NAME,
     ThemeContext,
 } from "../../config/config.js";
@@ -254,27 +253,27 @@ class Problem extends React.Component {
             }
         }
 
-        const newCompletedSteps = new Set(completedSteps);
+        if (!this.context.debug) {
+            const newCompletedSteps = new Set(completedSteps);
+            if(stepId) {
+                newCompletedSteps.add(stepId);
+            }
+    
+            await updateCompletedSteps(newCompletedSteps);
 
-        if(stepId) {
-            newCompletedSteps.add(stepId);
-        }
+            const objectives = Object.keys(lesson.learningObjectives);
+            objectives.unshift(0);
+            let numberOfCompletedSteps = newCompletedSteps.size;
+            let score = (numberOfCompletedSteps * 100) / 13;
+            score /= 100
 
-        updateCompletedSteps(newCompletedSteps);
-
-        const objectives = Object.keys(lesson.learningObjectives);
-        objectives.unshift(0);
-        let numberOfCompletedSteps = completedSteps.size;
-        let score = (numberOfCompletedSteps * 100) / 13;
-        score /= 100
-        console.log(score)
-
-        const relevantKc = {};
-        Object.keys(lesson.learningObjectives).forEach((x) => {
+            const relevantKc = {};
+            Object.keys(lesson.learningObjectives).forEach((x) => {
                 relevantKc[x] = this.bktParams[x].probMastery;
-        });
-
-        this.updateCanvas(score, relevantKc);
+            });
+            console.log(score)
+            this.updateCanvas(score, relevantKc);
+        }
 
         const nextStepStates = {
             ...stepStates,

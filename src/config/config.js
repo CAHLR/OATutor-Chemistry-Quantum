@@ -75,8 +75,8 @@ const PROGRESS_STORAGE_KEY = `${_SHORT_SITE_NAME}-progress`;
 export const LESSON_PROGRESS_STORAGE_KEY = (lessonId) =>
     `${PROGRESS_STORAGE_KEY}-${lessonId}`;
 
-export const STEP_PROGRESS_STORAGE_KEY = (lessonId) =>
-    `${PROGRESS_STORAGE_KEY}-${lessonId}-steps`;
+export const STEP_PROGRESS_STORAGE_KEY = () =>
+    `${PROGRESS_STORAGE_KEY}-steps`;
 
 const CANVAS_WARNING_STORAGE_KEY = `${_SHORT_SITE_NAME}-canvas-warning-dismissed`;
 
