@@ -13,7 +13,7 @@
                 "doMasteryUpdate": false,
                 "showStuMastery": false,
                 "unlockFirstHint": true,
-                "giveStuBottomHintOnly": true,
+
                 "learningObjectives": {
                     "stoichiometry": 0.85,
                     "post_test": 0.85,
@@ -29,7 +29,6 @@
                 "doMasteryUpdate": false,
                 "showStuMastery": false,
                 "unlockFirstHint": true,
-                "giveStuBottomHintOnly": false,
                 "learningObjectives": {
                     "stoichiometry": 0.85,
                     "post_test": 0.85,

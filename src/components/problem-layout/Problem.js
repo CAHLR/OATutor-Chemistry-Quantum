@@ -422,14 +422,6 @@ class Problem extends React.Component {
             return <div></div>;
         }
 
-        if (problem.id == 'ae4b921pre-test' || problem.id == 'ae4b921post-test') {
-            this.giveStuHints = false
-            this.giveStuFeedback=false
-        } else {
-            this.giveStuHints = true
-            this.giveStuFeedback=true
-        }
-
         return (
             <>
                 <div>

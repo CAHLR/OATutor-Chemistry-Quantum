@@ -92,16 +92,6 @@ class ProblemCard extends React.Component {
 
         // Bottom out hints option
         if (
-            this.giveStuBottomHintOnly &&
-            !(context.debug && context["use_expanded_view"])
-         ) {
-            // Bottom out hints
-            this.hints = []
-        }
-
-
-        // Bottom out hints option
-        if (
             this.giveStuBottomHint &&
             !(context.debug && context["use_expanded_view"])
         ) {

@@ -34,11 +34,14 @@ class Platform extends React.Component {
 
     constructor(props, context) {
         super(props);
-        this.state = {
-            prevCompletedSteps: new Set(),
-        };
 
-        this.orderedProblemIds = ["ae4b921pre-test", "a0b8589conversion1", "a0b8589conversion2", "a0b8589mass1", "a0b8589mass2", "a0b8589mass3", "a0b8589limiting2", "a0b8589limiting1", "a0b8589multiple1", "a0b8589multiple2", "ae4b921post-test"];
+        if (this.props.lessonID == '4GDGezBt-rwju-Jeqm9qUMat') {
+            this.orderedProblemIds = ["adffb1aquantum1", "adffb1aquantum2", "adffb1aquantum3", "adffb1aquantum4", "adffb1ashrodinger1", "adffb1awaves1", "adffb1awaves2", "adffb1awaves3", "adffb1abohr1", "adffb1abohr2", "adffb1abohr3", "adffb1ashrodinger2"];
+        }
+
+        if (this.props.lessonID == '0vJQ81Cm-AA29-k5aaXuYxnA') {
+            this.orderedProblemIds = ["a3c459bquantum1Chat", "a3c459bquantum2Chat", "a3c459bquantum3Chat", "a3c459bquantum4Chat", "a3c459bshrodinger1Chat", "a3c459bwaves1Chat", "a3c459bwaves2Chat", "a3c459bwaves3Chat", "a3c459bbohr1Chat", "a3c459bbohr2Chat", "a3c459bbohr3Chat", "a3c459bshrodinger2Chat"];
+        }
         
         this.problemIndex = {
             problems: problemPool,
@@ -99,16 +102,9 @@ class Platform extends React.Component {
             this.selectCourse(coursePlans[parseInt(this.props.courseNum)]);
         }
         this.onComponentUpdate(null, null, null);
-
-        const savedSteps = localStorage.getItem(STEP_PROGRESS_STORAGE_KEY());
-        if (savedSteps) {
-            this.setState({ prevCompletedSteps: new Set(JSON.parse(savedSteps)) });
-        }
     }
 
     updateCompletedSteps = async (newCompletedSteps) => {
-        this.setState({ prevCompletedSteps: new Set(newCompletedSteps) });
-
         localStorage.setItem(
             STEP_PROGRESS_STORAGE_KEY(),
             JSON.stringify(Array.from(newCompletedSteps))
@@ -309,6 +305,8 @@ class Platform extends React.Component {
         );
     
         let chosenProblem = null;
+
+        console.log(this.orderedProblemIds)
     
         for (let problemId of this.orderedProblemIds) {
             let problem = problems.find((prob) => prob.id === problemId);
