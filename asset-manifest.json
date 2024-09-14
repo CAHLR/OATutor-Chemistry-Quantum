@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OATutor-Chemistry-Quantum/static/css/main.66355a76.css",
-    "main.js": "/OATutor-Chemistry-Quantum/static/js/main.79b46995.js",
+    "main.js": "/OATutor-Chemistry-Quantum/static/js/main.17923112.js",
     "static/js/790.fd05bda3.chunk.js": "/OATutor-Chemistry-Quantum/static/js/790.fd05bda3.chunk.js",
     "static/js/563.56d4972d.chunk.js": "/OATutor-Chemistry-Quantum/static/js/563.56d4972d.chunk.js",
     "static/js/546.729d5457.chunk.js": "/OATutor-Chemistry-Quantum/static/js/546.729d5457.chunk.js",
@@ -12,10 +12,10 @@
     "static/media/Symbola.woff2": "/OATutor-Chemistry-Quantum/static/media/Symbola.080d8bb6a36e8bd8966b.woff2",
     "index.html": "/OATutor-Chemistry-Quantum/index.html",
     "main.66355a76.css.map": "/OATutor-Chemistry-Quantum/static/css/main.66355a76.css.map",
-    "main.79b46995.js.map": "/OATutor-Chemistry-Quantum/static/js/main.79b46995.js.map"
+    "main.17923112.js.map": "/OATutor-Chemistry-Quantum/static/js/main.17923112.js.map"
   },
   "entrypoints": [
     "static/css/main.66355a76.css",
-    "static/js/main.79b46995.js"
+    "static/js/main.17923112.js"
   ]
 }
