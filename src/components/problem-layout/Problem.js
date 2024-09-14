@@ -253,7 +253,7 @@ class Problem extends React.Component {
             }
         }
 
-        if (!this.context.debug) {
+        if (!this.context.debug && isCorrect) {
             const newCompletedSteps = new Set(completedSteps);
             if(stepId) {
                 newCompletedSteps.add(stepId);
@@ -264,14 +264,14 @@ class Problem extends React.Component {
             const objectives = Object.keys(lesson.learningObjectives);
             objectives.unshift(0);
             let numberOfCompletedSteps = newCompletedSteps.size;
-            let score = (numberOfCompletedSteps * 100) / 13;
+            let score = (numberOfCompletedSteps * 100) / 14;
             score /= 100
 
             const relevantKc = {};
             Object.keys(lesson.learningObjectives).forEach((x) => {
                 relevantKc[x] = this.bktParams[x].probMastery;
             });
-            console.log(score)
+
             this.updateCanvas(score, relevantKc);
         }
 
