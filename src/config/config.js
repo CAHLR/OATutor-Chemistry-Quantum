@@ -89,7 +89,7 @@ const EQUATION_EDITOR_AUTO_COMMANDS =
 const EQUATION_EDITOR_AUTO_OPERATORS = "sin cos tan";
 
 const MIDDLEWARE_URL =
-    "https://hqjbu81la8.execute-api.us-west-1.amazonaws.com/prod";
+    "https://jdcldmzkpl.execute-api.us-west-1.amazonaws.com/prod";
 
 const HELP_DOCUMENT =
     "https://docs.google.com/document/d/e/2PACX-1vToe2F3RiCx1nwcX9PEkMiBA2bFy9lQRaeWIbyqlc8W_KJ9q-hAMv34QaO_AdEelVY7zjFAF1uOP4pG/pub";
