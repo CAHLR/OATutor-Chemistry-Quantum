@@ -39,11 +39,11 @@ class Platform extends React.Component {
         };
 
         if (this.props.lessonID == '4GDGezBt-rwju-Jeqm9qUMat') {
-            this.orderedProblemIds = ["adffb1aquantum1", "adffb1aquantum2", "adffb1aquantum3", "adffb1aquantum4", "adffb1ashrodinger1", "adffb1awaves1", "adffb1awaves2", "adffb1awaves3", "adffb1abohr1", "adffb1abohr2", "adffb1abohr3", "adffb1ashrodinger2"];
+            this.orderedProblemIds = ["adffb1aquantum1", "adffb1aquantum2", "adffb1aquantum3", "adffb1awaves1", "adffb1awaves2", "adffb1awaves3", "adffb1aquantum4”, “adffb1abohr1", "adffb1abohr2", "adffb1abohr3", "adffb1ashrodinger1", "adffb1ashrodinger2"];
         }
 
         if (this.props.lessonID == '0vJQ81Cm-AA29-k5aaXuYxnA') {
-            this.orderedProblemIds = ["a3c459bquantum1Chat", "a3c459bquantum2Chat", "a3c459bquantum3Chat", "a3c459bquantum4Chat", "a3c459bshrodinger1Chat", "a3c459bwaves1Chat", "a3c459bwaves2Chat", "a3c459bwaves3Chat", "a3c459bbohr1Chat", "a3c459bbohr2Chat", "a3c459bbohr3Chat", "a3c459bshrodinger2Chat"];
+            this.orderedProblemIds = ["a3c459bquantum1Chat", "a3c459bquantum2Chat", "a3c459bquantum3Chat",  "a3c459bwaves1Chat", "a3c459bwaves2Chat", "a3c459bwaves3Chat", "a3c459bquantum4Chat", "a3c459bbohr1Chat", "a3c459bbohr2Chat", "a3c459bbohr3Chat", "a3c459bshrodinger1Chat", "a3c459bshrodinger2Chat"];
         }
         
         this.problemIndex = {
