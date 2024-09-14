@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Worked Solution",
-        "text": "The wavelength of the photon, approximately $$699.93$$ nm, falls within the visible spectrum. This wavelength corresponds to red light, which is typically associated with wavelengths ranging from about $$620$$ to $$750$$ nm.\\n\\nThus, the photon emitted is red in color.",
+        "text": "The color of light emitted is determined by its wavelength. The wavelength of the photon emitted, as calculated, is $$\\textbf{699.93 nm}$$. In the visible spectrum:\\n-Violet light ranges from about 380 to 450 nm,\\n-Blue light from 450 to 495 nm,\\n-Green light from 495 to 570 nm,\\n-Yellow light from 570 to 590 nm,\\n-Orange light from 590 to 620 nm,\\n-$$\\textbf{Red light ranges from 620 to 750 nm}$$.\\nSince the wavelength 699.93 nm falls within the range for red light, the photon emitted corresponds to $$\\textbf{red light}$$.",
         "variabilization": {},
         "oer": "",
         "license": ""

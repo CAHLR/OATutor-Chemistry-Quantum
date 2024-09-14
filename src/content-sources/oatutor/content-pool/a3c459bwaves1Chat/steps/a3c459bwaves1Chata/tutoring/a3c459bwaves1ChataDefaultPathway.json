@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Worked Solution",
-        "text": "The wavelength of $$671$$ nm corresponds to the red-orange region of the visible spectrum, as shown in the image. Therefore, the flame produced by excited lithium atoms will likely appear red.",
+        "text": "The image shows a spectrum of visible light with corresponding wavelengths in nanometers (nm) marked. Based on the information provided, lithium atoms emit light at 671 nm when excited, which falls within the red part of the visible spectrum, as indicated by the color labels in the image. Therefore, the flame from excited lithium atoms would indeed appear red due to this strong emission at 671 nm.",
         "variabilization": {},
         "oer": "",
         "license": ""

@@ -4,7 +4,7 @@
         "type": "hint",
         "dependencies": [],
         "title": "Worked Solution",
-        "text": "The quantum numbers provided are:\\n\\n- $$n$$ $$=$$ 4: The principal quantum number, which defines the energy level or shell.\\n- l $$=$$ 1: The azimuthal (angular momentum) quantum number, which defines the subshell.\\n\\nFor l $$=$$ $$1$$, the corresponding subshell is the $$p-subshell$$. The principal quantum number $$n$$ $$=$$ $$4$$ tells us that it is the 4th energy level.\\n\\nThus, the orbital described by the quantum numbers $$n$$ $$=$$ $$4$$ and l $$=$$ $$1$$ is the $$4p$$ orbital.",
+        "text": "The orbital described by the quantum numbers $$n = 4$$ and $$l = 1$$ corresponds to a 4p orbital. Here's the reasoning: \\n - $$\\textbf{Principal quantum number (n)}$$: This represents the energy level of the electron. In this case, $$n = 4$$ means the electron is in the 4th energy level.\\n- $$\\textbf{Azimuthal quantum number (l)}$$: This defines the shape of the orbital. The value of $$l$$ is associated with the type of orbital:\\n- $$l = 0$$ corresponds to an s orbital.\\n- $$l = 1$$ corresponds to a p orbital.\\n- $$l = 2$$ corresponds to a d orbital.\\n- $$l = 3$$ corresponds to an f orbital.\\nSince $$l = 1$$, the orbital is a $$\\textbf{p orbital}$$. Combining this with $$n = 4$$, the orbital is identified as $$\\textbf{4p}$$.",
         "variabilization": {},
         "oer": "",
         "license": ""

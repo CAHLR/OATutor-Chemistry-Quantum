@@ -4,9 +4,10 @@
         "$$1.06\\times {10}^{\\left(-3\\right)}$$"
     ],
     "problemType": "TextBox",
-    "stepTitle": "The gamma rays emitted by 60Co are used in radiation treatment of cancer. They have a frequency of $$2.83\\times {10}^{20} s-1$$. Calculate their wavelength in nm. Calculate the wavelength of the wave in meters.",
+    "stepTitle": "The gamma rays emitted by $$^{60}Co$$ are used in radiation treatment of cancer. They have a frequency of $$2.83\\times {10}^{20} s^{-1}$$. Calculate their wavelength in nm. Calculate the wavelength of the wave in meters. Please input your answer in $$nm$$. Please round to 2 decimal places.",
     "stepBody": "",
     "answerType": "arithmetic",
     "variabilization": {},
-    "answerLatex": "$$1.06\\times {10}^{\\left(-3\\right)}$$"
+    "answerLatex": "$$1.06\\times {10}^{\\left(-3\\right)}$$",
+    "tolerance": 0.1
 }

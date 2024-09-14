@@ -4,15 +4,15 @@
         "$$4p$$"
     ],
     "problemType": "MultipleChoice",
-    "stepTitle": "Determine the orbital described by the following set of quantum numbers: $$n$$ $$=$$ $$4$$, l $$=$$ $$1$$.",
+    "stepTitle": "Determine the orbital described by the following set of quantum numbers: $$n$$ $$=$$ $$4$$, $$l =$$ $$1$$.",
     "stepBody": "",
     "answerType": "string",
     "variabilization": {},
     "answerLatex": "$$4p$$",
     "choices": [
         "$$4p$$",
-        "4s",
+        "$$4s$$",
         "$$2p$$",
-        "2s"
+        "$$2s$$"
     ]
 }
