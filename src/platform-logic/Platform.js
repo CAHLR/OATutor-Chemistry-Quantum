@@ -34,6 +34,9 @@ class Platform extends React.Component {
 
     constructor(props, context) {
         super(props);
+        this.state = {
+            prevCompletedSteps: new Set(),
+        };
 
         if (this.props.lessonID == '4GDGezBt-rwju-Jeqm9qUMat') {
             this.orderedProblemIds = ["adffb1aquantum1", "adffb1aquantum2", "adffb1aquantum3", "adffb1aquantum4", "adffb1ashrodinger1", "adffb1awaves1", "adffb1awaves2", "adffb1awaves3", "adffb1abohr1", "adffb1abohr2", "adffb1abohr3", "adffb1ashrodinger2"];
@@ -102,9 +105,16 @@ class Platform extends React.Component {
             this.selectCourse(coursePlans[parseInt(this.props.courseNum)]);
         }
         this.onComponentUpdate(null, null, null);
+
+        const savedSteps = localStorage.getItem(STEP_PROGRESS_STORAGE_KEY());
+        if (savedSteps) {
+            this.setState({ prevCompletedSteps: new Set(JSON.parse(savedSteps)) });
+        }
     }
 
     updateCompletedSteps = async (newCompletedSteps) => {
+        this.setState({ prevCompletedSteps: new Set(newCompletedSteps) });
+
         localStorage.setItem(
             STEP_PROGRESS_STORAGE_KEY(),
             JSON.stringify(Array.from(newCompletedSteps))
@@ -305,8 +315,6 @@ class Platform extends React.Component {
         );
     
         let chosenProblem = null;
-
-        console.log(this.orderedProblemIds)
     
         for (let problemId of this.orderedProblemIds) {
             let problem = problems.find((prob) => prob.id === problemId);
