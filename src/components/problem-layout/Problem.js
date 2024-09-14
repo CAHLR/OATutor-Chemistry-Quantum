@@ -271,7 +271,8 @@ class Problem extends React.Component {
             Object.keys(lesson.learningObjectives).forEach((x) => {
                 relevantKc[x] = this.bktParams[x].probMastery;
             });
-
+            
+            console.log(score)
             this.updateCanvas(score, relevantKc);
         }
 
