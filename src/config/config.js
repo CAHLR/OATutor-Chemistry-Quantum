@@ -1,4 +1,5 @@
 import React from "react";
+import { jwtDecode } from 'jwt-decode';
 import courses from "../content-sources/oatutor/coursePlans.json";
 import { calculateSemester } from "../util/calculateSemester.js";
 
@@ -74,7 +75,16 @@ const USER_ID_STORAGE_KEY = `${_SHORT_SITE_NAME}-user_id`;
 const PROGRESS_STORAGE_KEY = `${_SHORT_SITE_NAME}-progress`;
 export const LESSON_PROGRESS_STORAGE_KEY = (lessonId) =>
     `${PROGRESS_STORAGE_KEY}-${lessonId}`;
-
+export const CANVAS_PROBLEM_SCORE_KEY = (jwtToken) => {
+    const decodedToken = jwtDecode(jwtToken);
+    const userId = decodedToken.user_id;
+    return `${PROGRESS_STORAGE_KEY}-${userId}`;
+}
+export const CANVAS_LESSON_PROGRESS_KEY = (jwtToken, lessonId) => {
+    const decodedToken = jwtDecode(jwtToken);
+    const userId = decodedToken.user_id;
+    return `${PROGRESS_STORAGE_KEY}-${userId}-${lessonId}`;
+};
 export const STEP_PROGRESS_STORAGE_KEY = () =>
     `${PROGRESS_STORAGE_KEY}-steps`;
 
@@ -89,7 +99,7 @@ const EQUATION_EDITOR_AUTO_COMMANDS =
 const EQUATION_EDITOR_AUTO_OPERATORS = "sin cos tan";
 
 const MIDDLEWARE_URL =
-    "https://jdcldmzkpl.execute-api.us-west-1.amazonaws.com/prod";
+    "https://kiaa5katd7.execute-api.us-west-1.amazonaws.com/prod";
 
 const HELP_DOCUMENT =
     "https://docs.google.com/document/d/e/2PACX-1vToe2F3RiCx1nwcX9PEkMiBA2bFy9lQRaeWIbyqlc8W_KJ9q-hAMv34QaO_AdEelVY7zjFAF1uOP4pG/pub";
