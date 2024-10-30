@@ -351,10 +351,7 @@ app.post(
         (lesson) => lesson.id === linkedLesson
       );
       if (idxOfFind > -1) {
-        lessonName =
-          lessons[idxOfFind].name.split(" ")[1] +
-          " " +
-          lessons[idxOfFind].topics;
+        lessonName = lessons[idxOfFind].name
         break;
       }
     }
