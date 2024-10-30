@@ -27,6 +27,7 @@ import {
 
 const problemSubmissionsOutput = "problemSubmissions";
 const canvasLessonProgress = "canvasLessonProgress";
+const canvasStepProgress = "canvasStepProgress";
 const canvasProblemMastery = "canvasProblemMastery";
 const problemStartLogOutput = "problemStartLogs";
 const GPTExperimentOutput = "GPTExperimentOutput";
@@ -332,7 +333,28 @@ class Firebase {
         return this.writeData("mouseMovement", data);
     }
 
+    async getCompletedSteps(docID) {
+        const collectionName = this.getCollectionName(canvasStepProgress);
+        const docRef = doc(this.db, collectionName, docID);
+        const docSnapshot = await getDoc(docRef);
 
+        if (!docSnapshot.exists) {
+            throw new Error(`Document with ID ${docID} does not exist.`);
+        }
+
+        const data = docSnapshot.data();
+        if (!data || !data.steps) {
+            throw new Error(`Document with ID ${docID} does not contain "steps" field.`);
+        }
+
+        return data.steps;
+    }
+
+    async setCompletedSteps(docID, steps) {
+        const stepObject = {"steps": steps};
+        this.writeData(canvasStepProgress, stepObject, docID);
+    }
+    
     async getCompletedProblems(docID) {
         const collectionName = this.getCollectionName(canvasLessonProgress);
         const docRef = doc(this.db, collectionName, docID);

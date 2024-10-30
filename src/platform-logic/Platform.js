@@ -116,10 +116,31 @@ class Platform extends React.Component {
     updateCompletedSteps = async (newCompletedSteps) => {
         this.setState({ prevCompletedSteps: new Set(newCompletedSteps) });
 
-        localStorage.setItem(
-            STEP_PROGRESS_STORAGE_KEY(),
-            JSON.stringify(Array.from(newCompletedSteps))
-        );
+        if (this.context?.jwt) {
+            const key = CANVAS_LESSON_PROGRESS_KEY(this.context.jwt, this.lesson.id)
+            await this.context.firebase.setCompletedSteps(
+                key,
+                Array.from(newCompletedSteps)
+            ).catch((error) => {
+                this.context.firebase.submitSiteLog(
+                    "site-error",
+                    `componentName: Platform.js`,
+                    {
+                        errorName: error.name || "n/a",
+                        errorCode: error.code || "n/a",
+                        errorMsg: error.message || "n/a",
+                        errorStack: error.stack || "n/a",
+                    },
+                    this.state.currProblem.id
+                );
+            });
+        }
+        else {
+            localStorage.setItem(
+                STEP_PROGRESS_STORAGE_KEY(),
+                JSON.stringify(Array.from(newCompletedSteps))
+            );
+        }
     }
 
     componentWillUnmount() {
@@ -262,10 +283,15 @@ class Platform extends React.Component {
         };
 
         const loadStepProgress = async () => {
-            const { getByKey } = this.context.browserStorage;
-            return await getByKey(
-                STEP_PROGRESS_STORAGE_KEY()
-            ).catch((err) => {});
+            if (this.context?.jwt) {
+                const key = CANVAS_LESSON_PROGRESS_KEY(this.context.jwt, this.lesson.id);
+                return await this.context.firebase.getCompletedSteps(key).catch((err) => {});
+            } else {
+                const { getByKey } = this.context.browserStorage;
+                return await getByKey(
+                    LESSON_PROGRESS_STORAGE_KEY(this.lesson.id)
+                ).catch((err) => {});
+            }
         };
         
 
