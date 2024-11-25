@@ -253,6 +253,13 @@ class Problem extends React.Component {
             }
         }
 
+        if (lesson.id == '5ZRsfSb6-z2ae-eKAIGnSM9M') {
+            const relevantKc = {
+                emailAddress: 1,
+            };
+            this.updateCanvas(1, relevantKc);
+        }
+
         if (!this.context.debug && isCorrect) {
             const newCompletedSteps = new Set(completedSteps);
             if(stepId) {
@@ -272,7 +279,6 @@ class Problem extends React.Component {
                 relevantKc[x] = this.bktParams[x].probMastery;
             });
 
-            console.log(score)
             this.updateCanvas(score, relevantKc);
         } 
         const nextStepStates = {
