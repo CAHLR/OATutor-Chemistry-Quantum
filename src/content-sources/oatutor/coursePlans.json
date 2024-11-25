@@ -38,5 +38,26 @@
                 }
             }
         ]
+    },
+    {
+        "courseName": "Emails",
+        "courseOER": "https://openstax.org/ <OpenStax>",
+        "courseLicense": "https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>",
+        "lessons": [
+            {
+                "id": "5ZRsfSb6-z2ae-eKAIGnSM9M",
+                "name": "Lesson Chemistry Emails:",
+                "topics": "Emails",
+                "allowRecycle": false,
+                "learningObjectives": {
+                    "emailaddress": 0.85
+                },
+                "giveStuFeedback": false,
+                "giveStuHints": false,
+                "doMasteryUpdate": false,
+                "showStuMastery": false,
+                "unlockFirstHint": false
+            }
+        ]
     }
 ]
