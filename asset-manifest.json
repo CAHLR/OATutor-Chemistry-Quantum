@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/OATutor-Chemistry-Thermo1/static/css/main.2770c070.css",
-    "main.js": "/OATutor-Chemistry-Thermo1/static/js/main.a81e2031.js",
-    "static/js/790.fd05bda3.chunk.js": "/OATutor-Chemistry-Thermo1/static/js/790.fd05bda3.chunk.js",
-    "static/js/563.56d4972d.chunk.js": "/OATutor-Chemistry-Thermo1/static/js/563.56d4972d.chunk.js",
-    "static/js/546.729d5457.chunk.js": "/OATutor-Chemistry-Thermo1/static/js/546.729d5457.chunk.js",
-    "static/media/Symbola.svg": "/OATutor-Chemistry-Thermo1/static/media/Symbola.f647c9292a2da02d9ae8.svg",
-    "static/media/Symbola.eot": "/OATutor-Chemistry-Thermo1/static/media/Symbola.d25fbd520f6558203fb4.eot",
-    "static/media/Symbola.ttf": "/OATutor-Chemistry-Thermo1/static/media/Symbola.1ac5fa7f9b82ed4ce3f3.ttf",
-    "static/media/Symbola.woff": "/OATutor-Chemistry-Thermo1/static/media/Symbola.353fd9bde3c87711f5fc.woff",
-    "static/media/Symbola.woff2": "/OATutor-Chemistry-Thermo1/static/media/Symbola.080d8bb6a36e8bd8966b.woff2",
-    "index.html": "/OATutor-Chemistry-Thermo1/index.html",
-    "main.2770c070.css.map": "/OATutor-Chemistry-Thermo1/static/css/main.2770c070.css.map",
-    "main.a81e2031.js.map": "/OATutor-Chemistry-Thermo1/static/js/main.a81e2031.js.map"
+    "main.css": "/OATutor-Chemistry-Quantum/static/css/main.66355a76.css",
+    "main.js": "/OATutor-Chemistry-Quantum/static/js/main.2ba4ab31.js",
+    "static/js/790.fd05bda3.chunk.js": "/OATutor-Chemistry-Quantum/static/js/790.fd05bda3.chunk.js",
+    "static/js/563.56d4972d.chunk.js": "/OATutor-Chemistry-Quantum/static/js/563.56d4972d.chunk.js",
+    "static/js/546.729d5457.chunk.js": "/OATutor-Chemistry-Quantum/static/js/546.729d5457.chunk.js",
+    "static/media/Symbola.svg": "/OATutor-Chemistry-Quantum/static/media/Symbola.f647c9292a2da02d9ae8.svg",
+    "static/media/Symbola.eot": "/OATutor-Chemistry-Quantum/static/media/Symbola.d25fbd520f6558203fb4.eot",
+    "static/media/Symbola.ttf": "/OATutor-Chemistry-Quantum/static/media/Symbola.1ac5fa7f9b82ed4ce3f3.ttf",
+    "static/media/Symbola.woff": "/OATutor-Chemistry-Quantum/static/media/Symbola.353fd9bde3c87711f5fc.woff",
+    "static/media/Symbola.woff2": "/OATutor-Chemistry-Quantum/static/media/Symbola.080d8bb6a36e8bd8966b.woff2",
+    "index.html": "/OATutor-Chemistry-Quantum/index.html",
+    "main.66355a76.css.map": "/OATutor-Chemistry-Quantum/static/css/main.66355a76.css.map",
+    "main.2ba4ab31.js.map": "/OATutor-Chemistry-Quantum/static/js/main.2ba4ab31.js.map"
   },
   "entrypoints": [
-    "static/css/main.2770c070.css",
-    "static/js/main.a81e2031.js"
+    "static/css/main.66355a76.css",
+    "static/js/main.2ba4ab31.js"
   ]
 }
